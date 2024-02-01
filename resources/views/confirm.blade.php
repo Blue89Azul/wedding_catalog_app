@@ -1,23 +1,4 @@
-<?php
-    require_once "./lib/Session.php";
-    require_once "./lib/Security.php";
-    require_once "./lib/database/DataBase.php";
-    require_once "./lib/Image.php";
-
-    $session  = new Session();
-    $security = new Security();
-    $database = new DataBase();
-    $session->isValidSession();
-    $session->isOrderedUser();
-?>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <?php include("./lib/header.php");?> 
-    <title>Aoi & Miho | 確認</title>
-</head>
-<body class="container">
-    <?php include("./lib/globalNav.php"); ?>
+<x-layout>
     <h1 class="middle-heading text-center mb-3">Confirm</h1>
     <p class="text-center">こちらの内容で注文を受け付けます。<br>注文内容に相違なければ、注文確定ボタンを押してください</p>
     <div class="d-flex justify-content-center">
@@ -125,5 +106,4 @@
         }
      }
      ?>
-</body>
-</html>
+</x-layout>

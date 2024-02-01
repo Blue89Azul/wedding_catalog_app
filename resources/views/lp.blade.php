@@ -1,18 +1,4 @@
-<?php
-    require_once "./lib/Session.php";
-    require_once "./lib/Image.php";
-    $session = new Session();
-    $session->isValidSession();
-?>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <?php include("lib/header.php");?> 
-    <title>Aoi & Miho | MIDORIとは</title>
-</head>
-<body class="container">
-<?php include("lib/globalNav.php"); ?>
-
+<x-layout>
     <div class="d-flex justify-content-center align-items-center mb-5 py-sm-0 py-5">
         <div id="logo">
             <img id="logo-wood" src="<?php Image::showMidori("stump.png"); ?>" alt="">
@@ -100,7 +86,4 @@
             MIDORI インスタグラム
         </a>
     </div>
-
-    <?php include("./lib/footer.php"); ?>
-</body>
-</html>
+</x-layout>

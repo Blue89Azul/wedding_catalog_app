@@ -1,18 +1,4 @@
-<?php
-    require_once "./lib/Session.php";
-    require_once "./lib/Image.php";
-    $session = new Session();
-    $session->isValidSession();
-?>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <?php include("./lib/header.php");?> 
-    <title>Aoi & Miho | わたしたちについて</title>
-</head>
-<body class="container w-100">
-    <?php include("./lib/globalNav.php"); ?>
-    
+<x-layout>
     <!-- 新郎新婦自己紹介 -->
     <h1 class="text-center middle-heading">Profiles</h1>
     <div>
@@ -91,5 +77,4 @@
     <!-- 時間があれば -->
     <script src="./js/chat.js"></script>
     <?php include("./lib/footer.php") ?>
-</body>
-</html>
+</x-layout>

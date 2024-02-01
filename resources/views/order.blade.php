@@ -1,33 +1,4 @@
-<?php
-    require_once "./lib/Session.php";
-    require_once "./lib/database/DataBase.php";
-
-    $session = new Session();
-    $session->isValidSession();
-    $session->isOrderedUser();
-
-    $database = new DataBase();
-    $address_info = $database->table("address")
-                             ->select(["*"])
-                             ->where("address_id", "=", [$_SESSION["ADDRESS_ID"]])
-                             ->execute()[0];
-                             
-    $postal_code  = "〒".$address_info["postal_code"];
-    $province     = $address_info["province"];
-    $city         = $address_info["city"];
-    $line         = $address_info["line"];
-    $building     = $address_info["building"];
-    $address_info = "{$province} {$city} {$line} {$building}";
-?>
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <?php include("./lib/header.php");?> 
-    <title>Aoi & Miho | 注文</title>
-</head>
-<body class="container">
-    <?php include("./lib/globalNav.php"); ?>
-    
+<x-layout>
     <!-- 住所 -->
     <div class="col-12 mb-5 mx-0 row justify-content-center">
         <h1 class="middle-heading text-center">Address</h1>
@@ -99,6 +70,4 @@
     </form>
     <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
     <script src="./js/confirm.js"></script>
-    <?php include("./lib/footer.php"); ?>
-</body>
-</html>
+</x-layout>
