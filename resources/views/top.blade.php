@@ -1,7 +1,6 @@
 <x-layout>
-    {{-- <x-elements.global_navigation></x-elements.global_navigation> --}}
     <!-- 結婚式の写真 -->
-    <div id="wedding-fotos" class="position-relative">
+    <div id="wedding_photos_slider" class="position-relative">
         <div id="main" class="h-100 w-100 position-absolute"></div>
         <div id="sub" class="h-100 w-100 position-absolute"></div>
     </div>
@@ -33,10 +32,8 @@
     <p class="text-center">引き出物を提供してくださったパラグアイブランド MIDORI と 私たちの紹介ページです</p>
     <div id="test" class="row w-100 m-0"></div>
 
-    <!-- 個別JS -->
-    <script src="./js/wedding-fotos-slider.js"></script>
-    <script type="text/javascript" src="./js/imageButton.js"></script>
-    <?php 
-        // include("./lib/footer.php") 
-    ?>
+    @vite([
+        'resources/js/wedding_photos_slider.js', 
+        'resources/js/image_button.js'
+    ]);
 </x-layout>

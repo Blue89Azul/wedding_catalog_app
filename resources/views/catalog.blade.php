@@ -1,8 +1,3 @@
-<?php
-    require_once "./lib/Session.php";
-    $session = new Session();
-    $session->isValidSession();
-?>
 <x-layout>
     <h1 class="text-center middle-heading">Catalog</h1>
     <p class="text-center">
@@ -13,5 +8,5 @@
     <!-- Catalog List -->
     <div id="catalog-list" class="tab-content d-flex justify-concent-around flex-wrap">
     </div>
-    <script type="text/javascript" src="./js/cardButton.js"></script>
+    @vite(['resources/js/card_button.js'])
 </x-layout>

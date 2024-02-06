@@ -4,7 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    @vite(['resources/sass/app.scss', 'resources/js/app.js']) 
+    @vite([
+        'resources/sass/app.scss', 
+        'resources/js/app.js', 
+        'resources/css/main.css',
+        'resources/css/chat.css',
+        'resources/css/lp.css',
+    ]) 
     <title>Catalogo de Boda</title>
 </head>
 <body class="container">
@@ -16,9 +22,9 @@
         
         <nav class="col-md-9 global_nav">
             <ul class="nav col-md-12 col-9 justify-content-around">
-                <li class="nav-item me-3"><a href="midori">De productos</a></li>
-                <li class="nav-item me-3"><a href="profile">De nosotros</a></li>
-                <li class="nav-item me-3"><a href="catalogList"></a></li>
+                <li class="nav-item me-3"><a href="{{ route('lp'); }}">productos</a></li>
+                <li class="nav-item me-3"><a href="{{ route('profile'); }}">nosotros</a></li>
+                <li class="nav-item me-3"><a href="{{ route('catalog'); }}">catálogo</a></li>
             </ul>
         </nav>
     
@@ -39,5 +45,13 @@
     
     </header>
     {{ $slot }}
+    <footer style="height:20vh;">
+        <div class="h-100 p-5">
+            <div class="text-center title-font text-muted fs-2">
+                <p class="m-0">Happy Wedding</p>
+                <p class="m-0"> ~ </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

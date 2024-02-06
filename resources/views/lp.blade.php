@@ -1,8 +1,8 @@
 <x-layout>
     <div class="d-flex justify-content-center align-items-center mb-5 py-sm-0 py-5">
         <div id="logo">
-            <img id="logo-wood" src="<?php Image::showMidori("stump.png"); ?>" alt="">
-            <img id="logo-design" src="<?php Image::showMidori("logo.png"); ?>" alt="">
+            <img id="logo-wood" src="" alt="">
+            <img id="logo-design" src="" alt="">
         </div>
     </div>
 
@@ -19,7 +19,7 @@
         </div>
         <div class="col-sm-6 col-12">
             <div class="h-100 w-100">
-                <img class="card-image" src="<?php Image::showMidori("section_presentation.jpg"); ?>" alt="">
+                <img class="card-image" src="" alt="">
             </div>
         </div>
     </section>
@@ -27,7 +27,7 @@
     <section id="parosant" class="desc-card row mb-5">
         <div class="col-sm-6 pc-image col-12">
             <div class="h-100 w-100">
-                <img class="card-image" src="<?php Image::showMidori("section_palosanto.jpg"); ?>" alt="">
+                <img class="card-image" src="" alt="">
             </div>
         </div>
         <div class="col-sm-6 col-12 p-3">
@@ -48,7 +48,7 @@
         </div>
         <div class="col-sm-6 mobile-image col-12">
             <div class="h-100 w-100">
-                <img class="card-image" src="<?php Image::showMidori("section_palosanto.jpg"); ?>" alt="">
+                <img class="card-image" src="" alt="">
             </div>
         </div>
     </section>
@@ -66,7 +66,7 @@
         </div>
         <div class="col-sm-6 col-12 change-mobile-image">
             <div class="h-100 w-100 biggest-image">
-                <img class="card-image" src="<?php Image::showMidori("section_3.jpg"); ?>" alt="">
+                <img class="card-image" src="" alt="">
             </div>
         </div>
     </section>
