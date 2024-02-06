@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StaticViewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('login');
+Route::get('/', function () { return view('login'); })->name('login');
+
+Route::middleware(['auth', 'auth.session'])->group(function () {
+    Route::get('/top', function () { return view('top'); })->name('top');
+    Route::get('/lp', [StaticViewController::class, 'showLp'])->name('lp');
+    Route::get('/catalog_list', [StaticViewController::class, 'showCatalog'])->name('catalog');
+    Route::get('/profile', [StaticViewController::class, 'showProfile'])->name('profile');
 });
