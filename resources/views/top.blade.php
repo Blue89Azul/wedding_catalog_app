@@ -29,7 +29,7 @@
 
     <!-- コンテンツ -->
     <h1 class="text-center middle-heading">Contenidos</h1>
-    <p class="text-center">引き出物を提供してくださったパラグアイブランド MIDORI と 私たちの紹介ページです</p>
+    <p class="text-center">引き出物を提供してくださった</p>
     <div id="test" class="row w-100 m-0"></div>
 
     @vite([

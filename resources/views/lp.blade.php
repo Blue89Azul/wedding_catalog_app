@@ -56,7 +56,7 @@
     <section id="commitment" class="desc-card row mb-5">
         <div class="col-sm-6 col-12 p-3">
             <div>
-                <h1 class="title-under-line text-center">MIDORIのこだわり</h1>
+                <h1 class="title-under-line text-center">こだわり</h1>
                 <div class="card-text">
                     <p>
                         ほとんどの商品は現地の工場から出た廃材を再利用しています。仕上げの磨きは細かいヤスリを使用し、全て手作業で行っています。また、ニスなどの化学製品を使わず、国産の天然ミツロウでコーティングしています。
@@ -83,7 +83,7 @@
             <span class="instagram-icon">
                 <i class="fab fa-instagram"></i>
             </span> 
-            MIDORI インスタグラム
+            インスタグラム
         </a>
     </div>
 </x-layout>

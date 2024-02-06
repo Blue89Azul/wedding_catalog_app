@@ -102,18 +102,18 @@ header.fixed {
 }
 
 .background-style {
-    background-image: url("https://wedding-catalog-strage.s3.ap-northeast-1.amazonaws.com/A4_Landscape__bouquet-and-foot__detail-shot-01.jpg");
+    background-image: url("");
     background-position: center center;
     background-size: cover;
 }
 
 .profile-image {
-    background-image: url("https://wedding-catalog-strage.s3.ap-northeast-1.amazonaws.com/IMG_20190302_105109.jpg");
+    background-image: url("");
     background-position: center center;
     background-size: cover;
 }
 .profile-image2 {
-    background-image: url("https://wedding-catalog-strage.s3.ap-northeast-1.amazonaws.com/IMG-20200209-WA0005.jpg");
+    background-image: url("");
     background-position: center center;
     background-size: cover;
 }
@@ -133,13 +133,13 @@ header.fixed {
 }
 
 .main-product {
-    background-image: url("https://wedding-catalog-strage.s3.ap-northeast-1.amazonaws.com/product-fotos/cocina_a.jpg");
+    background-image: url("");
     background-position: center center;
     background-size: cover;
 }
 
 .image3 {
-    background-image: url("https://wedding-catalog-strage.s3.ap-northeast-1.amazonaws.com/IMG_0935.jpg");
+    background-image: url("");
     background-position: center center;
     background-size: cover;
 }

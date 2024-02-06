@@ -81,12 +81,12 @@
 }
 
 .b-right.man:after {
-  background: url("https://wedding-catalog-strage.s3.ap-northeast-1.amazonaws.com/IMG_20190302_105109.jpg") center center /cover no-repeat;
+  background: url("") center center /cover no-repeat;
   right: -100px; /* 注意2と同じ数値をマイナスで指定 */
 }
 
 .b-right.woman:after {
-  background: url("https://wedding-catalog-strage.s3.ap-northeast-1.amazonaws.com/IMG-20200209-WA0005.jpg") center center /cover no-repeat;
+  background: url("") center center /cover no-repeat;
   right: -100px; /* 注意2と同じ数値をマイナスで指定 */
 }
 

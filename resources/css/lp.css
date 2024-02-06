@@ -51,7 +51,7 @@ section {
   .card-image {
       height: 90%;
       width: 90%;
-      object-fit: cover; /* reference: https://www.webcreatorbox.com/tech/object-fit */
+      object-fit: cover;
   }
   
   .speech-bubble {
