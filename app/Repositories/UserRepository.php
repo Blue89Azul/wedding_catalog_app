@@ -17,13 +17,10 @@ class UserRepository {
         $this->user       = $user;
     }
 
-    // Transaction
     public function insert(array $userInfo): void
     {
-        $prefectureId = $prefecture->getIdByName($userInfo['prefecture']);
-        $userInfo['prefecture_id'] = $prefectureId;
-
-        $address->insert($userInfo);
-        
+        $this->address->insert($userInfo);
+        $this->prefecture->insert($userInfo);
+        $this->user->insert($userInfo);
     }
 }
