@@ -8,18 +8,17 @@ use App\Services\Csv\Validate\UserCsvValidator;
 use App\Services\Csv\Convert\UserCsvConverter;
 
 
-class UserCsvService implements CsvServiceInterface
-{   
-    private UserCsvConverter $converter;
-    private UserCsvValidator $validator;
+class CsvService implements CsvServiceInterface
+{  
+    private CsvValidatorInterface $validator; 
+    private CsvConverterInterface $converter;
 
-    // ドメインによって戦略が変わる
     public function __construct(
-        UserCsvValidator $validator,
-        UserCsvConverter $converter,
+        CsvValidatorInterface $validator,
+        CsvConverterInterface $converter,
     ) {
-        $this->converter = $converter;
         $this->validator = $validator;
+        $this->converter = $converter;
     }
 
     public function upload(string $filePath) 
