@@ -1,0 +1,42 @@
+name: Laravel ci
+on:
+    push:
+        branches:
+            - main
+jobs:
+    laravel:
+        name: Laravel
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v2
+
+            - name: Composer Cache
+              id: composer_cache
+              run: |
+                echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+            - uses: actions/cache@v3
+              with:
+                path: ${{ steps.composer_cache.outputs.dir }}
+                key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+                restore-keys: ${{ runner.os }}-composer-
+
+            - name: Set up PHP 8.3
+              uses: shivammathur/setup-php@v2
+              with:
+                    php-version: '8.3'
+            
+            - name: Composer Install
+              if: steps.composer_cache.outputs.cache-hit != 'true'
+              run: |
+                composer install -n --prefer-dist
+
+            - name: Copy .env
+              run: cp .env.example .env
+
+            - name: Generate key
+              run: php artisan key:generate
+
+            - name: Execute tests
+              run: vendor/bin/phpunit
+
+
