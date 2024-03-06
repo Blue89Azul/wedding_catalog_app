@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domains\Applications;
+namespace App\Domains\Singleton;
 
 use App\Models\Prefecture;
 use Illuminate\Database\Eloquent\Collection;
