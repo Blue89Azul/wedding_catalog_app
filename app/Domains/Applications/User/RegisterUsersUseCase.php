@@ -17,6 +17,6 @@ class RegisterUsersUseCase {
 
     public function handle(array $userInfo): void 
     {
-        $this->registerUserInfoService->handle($userInfo);
+        
     }
 }
