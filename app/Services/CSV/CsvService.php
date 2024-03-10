@@ -10,42 +10,28 @@ use App\Services\Csv\Convert\UserCsvConverter;
 
 class CsvService implements CsvServiceInterface
 {  
-    private CsvValidatorInterface $validator; 
-    private CsvConverterInterface $converter;
-
-    public function __construct(
-        CsvValidatorInterface $validator,
-        CsvConverterInterface $converter,
-    ) {
-        $this->validator = $validator;
-        $this->converter = $converter;
-    }
-
-    public function upload(string $filePath) 
+    public function upload(string $filePath)
     {
-        $directory   = "";
-        $fileContent = Storage::disc($directory)->readStream($filePath);
-        Storage::disc($directory)->delete($fileName);
+        $fileContent = Storage::disk('master')->readStream('列席者テスト.csv');
+        Storage::disk('master')->delete('列席者テスト.csv');
 
         $row = [];
         while($row !== false) {
-            $row = fgetcsv($file_content);
-            $row = $converter->handle($row);
-            $validator->handle($row);
+            $row = fgetcsv($fileContent);
             yield $row;
         }
         
-        fclose($file_content);
+        fclose($fileContent);
     }
 
-    public function download()
+    public function download(string $filePath)
     {
         // 
     }
 
     private function existsCsvFile(string $directory, string $fileName): bool 
     {
-        if (!Storage::disc($directory)->exist($fileName)) {
+        if (!Storage::disk($directory)->exist($fileName)) {
             return false;
         }
 

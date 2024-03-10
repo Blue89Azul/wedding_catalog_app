@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Service\Register;
+namespace App\Services\Register;
 
-use App\Repository\UserRepository;
+use App\Repositories\UserRepository;
 use App\Services\Convert\ConverterInterface;
 use App\Services\Validate\ValidatorInterface;
 

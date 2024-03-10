@@ -2,7 +2,7 @@
 
 namespace App\Services\Convert;
 
-use App\Domains\Applications\PrefectureSingleton;
+use App\Domains\Singleton\PrefectureSingleton;
 
 class UserCsvConverter implements ConverterInterface {
 
